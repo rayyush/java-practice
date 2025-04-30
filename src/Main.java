@@ -19,6 +19,10 @@ public class Main {
         System.out.println(obj.a);
         Child obj1 = new Child();
         System.out.println(obj1.a);
+        Parent obj3 = new Child();
+        obj3.a = 500;
+        System.out.println("Child.a: " + Child.a);
+        System.out.println("Parent.a: " + Parent.a);
 
         //interfaces vs abstract class
         Bird bird = new Bird();
@@ -44,7 +48,7 @@ public class Main {
         Stu stu1 = new Stu("Ayush", 1);
         Stu stu2 = new Stu("Ayush", 1);
 
-        System.out.println(stu1 == stu2git ad);
+        System.out.println(stu1 == stu2);
         HashSet<Stu> set = new HashSet<>();
         set.add(stu1);
         set.add(stu2);

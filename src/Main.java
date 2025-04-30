@@ -10,6 +10,8 @@ public class Main {
         car.start();
         vehicle.start();
         car.noise();
+        Vehicle v2 = new Car();
+        ((Car)v2).noise();
 
         //static
         Parent obj = new Child();

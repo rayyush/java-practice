@@ -44,7 +44,7 @@ public class Main {
         Stu stu1 = new Stu("Ayush", 1);
         Stu stu2 = new Stu("Ayush", 1);
 
-        System.out.println(stu1.equals(stu2));
+        System.out.println(stu1 == stu2git ad);
         HashSet<Stu> set = new HashSet<>();
         set.add(stu1);
         set.add(stu2);

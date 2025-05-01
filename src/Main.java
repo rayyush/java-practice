@@ -1,6 +1,7 @@
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
@@ -56,6 +57,12 @@ public class Main {
         set.add(stu2);
 
         System.out.println(set.size());
+
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> squaredNumbers = numbers.stream()
+                .map(n -> n * n)
+                .collect(Collectors.toList());
+        System.out.println(squaredNumbers);
     }
 }
 

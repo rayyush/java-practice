@@ -229,3 +229,36 @@ class Stu{
         return Objects.hash(name, rollno);
     }
 }
+
+class CopyOfAddress {
+    String city;
+
+    public CopyOfAddress(String city) {
+        this.city = city;
+    }
+
+    // Copy constructor to create a deep copy
+    public CopyOfAddress(CopyOfAddress other) {
+        this.city = other.city;
+    }
+}
+
+class CopyOfStudent {
+    String name;
+    CopyOfAddress address;
+
+    public CopyOfStudent(String name, CopyOfAddress address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    public CopyOfStudent(CopyOfStudent other) {
+        this.name = other.name;
+        this.address = new CopyOfAddress(other.address);
+    }
+
+
+    public void printData() {
+        System.out.println("Name: " + name + ", City: " + address.city);
+    }
+}
